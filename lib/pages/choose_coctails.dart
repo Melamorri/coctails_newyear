@@ -43,6 +43,7 @@ class _CoctailState extends State<Coctail> {
                         Color.fromARGB(255, 218, 162, 181)),
                   ),
                   onPressed: () {
+                    // функция
                     Navigator.pushNamed(context, '/recipe');
                   },
                   child: const Text(
@@ -57,3 +58,9 @@ class _CoctailState extends State<Coctail> {
     );
   }
 }
+// функиция
+// int_randomCoctail() {
+//   var coctailList = [1, 2, 3];   - список коктейлей по id
+
+//   return (list..shuffle()).first;
+// }
