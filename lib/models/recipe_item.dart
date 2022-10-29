@@ -1,5 +1,7 @@
+import 'package:flutter/cupertino.dart';
+
 class Recipe{
-  final String id;
+  final int id;
   final String description;
   final String image;
   final List<String> ingredients;
@@ -12,3 +14,9 @@ class Recipe{
     required this.ingredients, 
   });
 }
+
+List <Recipe> recipesList = [
+  Recipe(id: 1, description: description, image: AssetImage (), ingredients: ingredients),
+
+
+]
