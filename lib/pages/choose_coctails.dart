@@ -25,29 +25,45 @@ class _CoctailState extends State<Coctail> {
               // padding: const EdgeInsetsDirectional.only(top: 30),
               // alignment: Alignment.topCenter,
               children: [
-                ElevatedButton(
-                  style: ButtonStyle(
-                    backgroundColor: MaterialStatePropertyAll<Color>(
-                        Color.fromARGB(255, 17, 95, 20)),
-                    shadowColor: MaterialStatePropertyAll<Color>(
-                        Color.fromARGB(255, 218, 162, 181)),
-                  ),
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/recipe');
-                  },
-                  child: const Text(
-                    'Смешай свой \nкоктейль!',
+                Text("Наколдуй себе настроение! ",
                     textAlign: TextAlign.center,
-                    style: TextStyle(),
-                  ),
-                ),
+                    style: TextStyle(
+                        color: blueBackground,
+                        // fontFamily: "Exo2",
+                        fontFamily: "Pacifico",
+                        fontSize: 40,
+                        fontWeight: FontWeight.bold)),
                 Center(
                     child: Image(
                   image: AssetImage("assets/images/party.png"),
                 )),
+                ElevatedButton(
+                    style: ButtonStyle(
+                      backgroundColor:
+                          MaterialStatePropertyAll<Color>(blueBackground),
+                      shadowColor: MaterialStatePropertyAll<Color>(
+                          Color.fromARGB(255, 218, 162, 181)),
+                    ),
+                    onPressed: () {
+                      // функция
+                      Navigator.pushNamed(context, '/recipe');
+                    },
+                    child: const Text(
+                      'Смешай свой \nкоктейль!',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(fontFamily: "Exo2"),
+                    )
+                    // style: Theme.of(context).textTheme.bodyText2),
+                    ),
               ]),
         ),
       ),
     );
   }
 }
+// функиция
+// int_randomCoctail() {
+//   var coctailList = [1, 2, 3];   - список коктейлей по id
+
+//   return (list..shuffle()).first;
+// }
