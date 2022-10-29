@@ -30,7 +30,7 @@ class _CoctailState extends State<Coctail> {
                 SizedBox(height: 100),
                 ElevatedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, '/recipe');
+                    Navigator.pushNamed(context, '/choosecoctail');
                   },
                   child: const Text('Shacke your coctail'),
                 ),
