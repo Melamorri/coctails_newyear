@@ -28,6 +28,7 @@ class RecipePage extends StatelessWidget {
       body: SingleChildScrollView(
           child: Column(
         children: [
+
           //Image:
           SizedBox(
             width: double.infinity,
@@ -38,15 +39,16 @@ class RecipePage extends StatelessWidget {
           //Description:
 
           Container(
-            margin: const EdgeInsets.symmetric(vertical: 12),
+            margin: const EdgeInsets.symmetric(vertical: 20),
             child: Text(
               recipe.description,
               textAlign: TextAlign.center,
+              style: const TextStyle(fontWeight: FontWeight.bold, fontStyle: FontStyle.italic),
             ),
           ),
 
           //Ingredients section
-          buildSectionTitle(context, "Ingredients"),
+          buildSectionTitle(context, "Ingredients",),
           Container(
             height: 200,
             //width: 300,
@@ -60,7 +62,7 @@ class RecipePage extends StatelessWidget {
             child: ListView.builder(
               itemCount: recipe.ingredients.length,
               itemBuilder: ((context, index) =>  Card(
-                    color: Colors.yellow,
+                    color: Color.fromARGB(255, 218, 162, 181),
                     child: Padding(
                       padding:
                           const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
