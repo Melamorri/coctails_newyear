@@ -1,5 +1,7 @@
 import 'package:coctails_newyear/helpers/colors.dart';
 import 'package:flutter/material.dart';
+import "dart:math";
+import '../models/recipe_item.dart';
 
 class Coctail extends StatefulWidget {
   const Coctail({super.key});
@@ -69,3 +71,4 @@ class _CoctailState extends State<Coctail> {
 
 //   return (list..shuffle()).first;
 // }
+
