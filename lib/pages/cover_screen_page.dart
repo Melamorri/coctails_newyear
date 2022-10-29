@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
+import 'package:coctails_newyear/helpers/colors.dart';
 
 class CoverScreenPage extends StatefulWidget {
   const CoverScreenPage({super.key});
@@ -9,25 +10,31 @@ class CoverScreenPage extends StatefulWidget {
 }
 
 class _CoverScreenPageState extends State<CoverScreenPage> {
+  Timer? timer;
+  @override
+  void initState() {
+    timer = Timer(const Duration(seconds: 3), () {
+      Navigator.pushNamed(context, '/choosecoctail');
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-        child: Container(
-      // padding: const EdgeInsets.only(top: 20),
-      decoration: const BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage("assets/images/cover.jpg"), fit: BoxFit.cover)),
+      //   child: Container(
+      // // padding: const EdgeInsets.only(top: 20),
+      // decoration: const BoxDecoration(
+      //     image: DecorationImage(
+      //         image: AssetImage("assets/images/enter.png"), fit: BoxFit.cover)),
       child: Scaffold(
-        backgroundColor: Colors.transparent,
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            // Image(
-            //     image: AssetImage('assets/images/cover.jpg'),
-            //     fit: BoxFit.cover),
-          ],
+        backgroundColor: blueBackground,
+        body: Container(
+          decoration: const BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage("assets/images/enter.png"),
+                  fit: BoxFit.cover)),
         ),
       ),
-    ));
+    );
   }
 }
