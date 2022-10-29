@@ -1,3 +1,4 @@
+import 'package:coctails_newyear/helpers/colors.dart';
 import 'package:flutter/material.dart';
 import '../models/recipe_item.dart';
 
@@ -14,8 +15,15 @@ class RecipePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: pinkBackground,
       appBar: AppBar(
-        title: const Text("Recipe Title"),
+        backgroundColor: pinkBackground,
+        title: Text('Рецепты',
+            style: TextStyle(
+                fontFamily: 'Exo2',
+                fontSize: 25,
+                fontWeight: FontWeight.w700,
+                color: blackText)),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -32,13 +40,18 @@ class RecipePage extends StatelessWidget {
 
           Container(
             margin: const EdgeInsets.symmetric(vertical: 12),
-            child: Text(
-              'Description',
-            ),
+            child: const Text('Название коктейля',
+                style: TextStyle(
+                  fontFamily: 'Pacifico',
+                  fontSize: 27,
+                )),
           ),
 
           //Ingredients section
-          buildSectionTitle(context, "Ingredients"),
+          buildSectionTitle(
+            context,
+            "Ингредиенты",
+          ),
           Container(
             height: 200,
             //width: 300,
@@ -52,11 +65,14 @@ class RecipePage extends StatelessWidget {
             child: ListView.builder(
               itemCount: 2, //recipe.ingredients.length,
               itemBuilder: ((context, index) => const Card(
-                    color: Colors.yellow,
                     child: Padding(
                       padding:
                           EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-                      child: Text('point!'),
+                      child: Text('Ингредиент',
+                          style: TextStyle(
+                              fontFamily: 'Exo2',
+                              fontSize: 20,
+                              fontStyle: FontStyle.italic)),
                     ),
                   )),
             ),
