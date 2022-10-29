@@ -38,7 +38,7 @@ List<Recipe> recipesList = [
       id: 3,
       title: "Снежная королева",
       description: "коктейль, которым больше любуешься, чем наслаждаешься",
-      image: "assets/images/coctails/ice_queen,jpeg",
+      image: "assets/images/coctails/ice_queen.jpeg",
       ingredients: [
         "итальянское проссеко, сироп блю-кюросао, кандурин, веточка свежей мяты, нежная, мятная пенка"
       ])

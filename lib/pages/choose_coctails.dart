@@ -32,7 +32,7 @@ class _CoctailState extends State<Coctail> {
                         // fontFamily: "Exo2",
                         fontFamily: "Pacifico",
                         fontSize: 40,
-                        fontWeight: FontWeight.bold)),
+                        fontWeight: FontWeight.normal)),
                 Center(
                     child: Image(
                   image: AssetImage("assets/images/party.png"),
@@ -49,9 +49,12 @@ class _CoctailState extends State<Coctail> {
                       Navigator.pushNamed(context, '/recipe');
                     },
                     child: const Text(
-                      'Смешай свой \nкоктейль!',
+                      'Смешай свой коктейль!',
                       textAlign: TextAlign.center,
-                      style: TextStyle(fontFamily: "Exo2"),
+                      style: TextStyle(
+                          fontFamily: "Exo2",
+                          fontSize: 20,
+                          fontWeight: FontWeight.normal),
                     )
                     // style: Theme.of(context).textTheme.bodyText2),
                     ),
