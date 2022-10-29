@@ -29,8 +29,9 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(
           primarySwatch: Colors.blue,
           textTheme: TextTheme(
-              bodyText1: TextStyle(fontFamily: 'Pacifico'),
-              bodyText2: TextStyle(fontFamily: 'Exo2'))),
+            bodyText1: TextStyle(fontFamily: 'Pacifico'),
+            // bodyText2: TextStyle(fontFamily: 'Exo2'))
+          )),
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
