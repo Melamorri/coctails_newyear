@@ -25,6 +25,16 @@ class _CoctailState extends State<Coctail> {
               // padding: const EdgeInsetsDirectional.only(top: 30),
               // alignment: Alignment.topCenter,
               children: [
+                Text("Наколдуй себе настроение! ",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        color: Color.fromARGB(255, 17, 95, 20),
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold)),
+                Center(
+                    child: Image(
+                  image: AssetImage("assets/images/party.png"),
+                )),
                 ElevatedButton(
                   style: ButtonStyle(
                     backgroundColor: MaterialStatePropertyAll<Color>(
@@ -41,10 +51,6 @@ class _CoctailState extends State<Coctail> {
                     style: TextStyle(),
                   ),
                 ),
-                Center(
-                    child: Image(
-                  image: AssetImage("assets/images/party.png"),
-                )),
               ]),
         ),
       ),
