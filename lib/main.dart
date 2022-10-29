@@ -21,8 +21,8 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       routes: {
         '/': (context) => CoverScreenPage(),
-        '/recipe': (context) => Coctail(),
-        // '/formpage': (context) => FormPage(),
+        // '/recipe': (context) => MenuPage(),
+        '/choosecoctail': (context) => Coctail(),
       },
       theme: ThemeData(
         primarySwatch: Colors.blue,
