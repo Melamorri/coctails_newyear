@@ -9,6 +9,14 @@ class CoverScreenPage extends StatefulWidget {
 }
 
 class _CoverScreenPageState extends State<CoverScreenPage> {
+  Timer? timer;
+  @override
+  void initState() {
+    timer = Timer(const Duration(seconds: 3), () {
+      Navigator.pushNamed(context, '/choosecoctail');
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -16,7 +24,7 @@ class _CoverScreenPageState extends State<CoverScreenPage> {
       // padding: const EdgeInsets.only(top: 20),
       decoration: const BoxDecoration(
           image: DecorationImage(
-              image: AssetImage("assets/images/cover.jpg"), fit: BoxFit.cover)),
+              image: AssetImage("assets/images/enter.png"), fit: BoxFit.cover)),
       child: Scaffold(
         backgroundColor: Colors.transparent,
         body: Column(
