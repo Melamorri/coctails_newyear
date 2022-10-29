@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:coctails_newyear/pages/cover_screen_page.dart';
 import 'package:coctails_newyear/pages/choose_coctails.dart';
+import 'package:coctails_newyear/pages/recipe.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +22,7 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       routes: {
         '/': (context) => CoverScreenPage(),
-        // '/recipe': (context) => MenuPage(),
+        '/recipe': (context) => RecipePage(),
         '/choosecoctail': (context) => Coctail(),
       },
       theme: ThemeData(

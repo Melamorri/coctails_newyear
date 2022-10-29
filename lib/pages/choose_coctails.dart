@@ -28,7 +28,7 @@ class _CoctailState extends State<Coctail> {
                 Text("Наколдуй себе настроение! ",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                        color: Color.fromARGB(255, 17, 95, 20),
+                        color: background,
                         fontSize: 30,
                         fontWeight: FontWeight.bold)),
                 Center(
@@ -37,8 +37,8 @@ class _CoctailState extends State<Coctail> {
                 )),
                 ElevatedButton(
                   style: ButtonStyle(
-                    backgroundColor: MaterialStatePropertyAll<Color>(
-                        Color.fromARGB(255, 17, 95, 20)),
+                    backgroundColor:
+                        MaterialStatePropertyAll<Color>(background),
                     shadowColor: MaterialStatePropertyAll<Color>(
                         Color.fromARGB(255, 218, 162, 181)),
                   ),
