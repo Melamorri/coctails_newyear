@@ -21,21 +21,15 @@ class _CoctailState extends State<Coctail> {
           body: SizedBox(
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height,
-            child: SizedBox(
-                child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Image.network(
-                    'https://cdn.lifehacker.ru/wp-content/uploads/2018/07/10-klassicheskix-alkogolnyx-kokteJleJ-kotorye-ne-vyxodyat-iz-mody_1532122147-1280x640.jpg'),
-                SizedBox(height: 100),
-                ElevatedButton(
+            child: Container(
+                padding: const EdgeInsetsDirectional.only(bottom: 20),
+                alignment: Alignment.bottomCenter,
+                child: ElevatedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, '/choosecoctail');
+                    Navigator.pushNamed(context, '/recipe');
                   },
-                  child: const Text('Shacke your coctail'),
-                ),
-              ],
-            )),
+                  child: const Text('Смешай свой коктейль'),
+                )),
           ),
         ),
       ),
