@@ -2,13 +2,10 @@ import 'package:flutter/material.dart';
 import '../models/recipe_item.dart';
 import 'dart:math';
 
-
 class RecipePage extends StatelessWidget {
   const RecipePage({super.key});
 
-
   Widget buildSectionTitle(BuildContext context, String text) {
-  
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 10),
       child: Text(text, style: const TextStyle(fontSize: 24)),
@@ -21,7 +18,7 @@ class RecipePage extends StatelessWidget {
     final recipe = recipesList[rnd.nextInt(recipesList.length)];
     return Scaffold(
       appBar: AppBar(
-        title:  Text(recipe.title),
+        title: Text(recipe.title),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -57,11 +54,11 @@ class RecipePage extends StatelessWidget {
             ),
             child: ListView.builder(
               itemCount: recipe.ingredients.length,
-              itemBuilder: ((context, index) =>  Card(
-                    color: Colors.yellow,
+              itemBuilder: ((context, index) => Card(
+                    color: Color.fromARGB(255, 218, 162, 181),
                     child: Padding(
-                      padding:
-                          const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 5, horizontal: 10),
                       child: Text(recipe.ingredients[index]),
                     ),
                   )),
