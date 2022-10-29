@@ -1,3 +1,4 @@
+import 'package:coctails_newyear/pages/recipe.dart';
 import 'package:flutter/material.dart';
 import 'package:coctails_newyear/pages/cover_screen_page.dart';
 import 'package:coctails_newyear/pages/choose_coctails.dart';
@@ -20,13 +21,15 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        '/': (context) => CoverScreenPage(),
+        '/': (context) => RecipePage(),
         // '/recipe': (context) => MenuPage(),
         '/choosecoctail': (context) => Coctail(),
       },
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+          primarySwatch: Colors.blue,
+          textTheme: TextTheme(
+              bodyText1: TextStyle(fontFamily: 'Pacifico'),
+              bodyText2: TextStyle(fontFamily: 'Exo2'))),
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
