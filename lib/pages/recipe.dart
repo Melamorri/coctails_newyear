@@ -1,3 +1,4 @@
+import 'package:coctails_newyear/helpers/colors.dart';
 import 'package:flutter/material.dart';
 import '../models/recipe_item.dart';
 
@@ -14,7 +15,9 @@ class RecipePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       appBar: AppBar(
+        backgroundColor: blueBackground,
         title: const Text("Recipe Title"),
         centerTitle: true,
       ),
@@ -32,7 +35,7 @@ class RecipePage extends StatelessWidget {
 
           Container(
             margin: const EdgeInsets.symmetric(vertical: 12),
-            child: Text(
+            child: const Text(
               'Description',
             ),
           ),

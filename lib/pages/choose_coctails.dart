@@ -31,9 +31,8 @@ class _CoctailState extends State<Coctail> {
                         color: blueBackground,
                         // fontFamily: "Exo2",
                         fontFamily: "Pacifico",
-                        fontSize: 40,
-                        fontWeight: FontWeight.bold)),
-                Center(
+                        fontSize: 40,)),
+                const Center(
                     child: Image(
                   image: AssetImage("assets/images/party.png"),
                 )),
@@ -41,18 +40,21 @@ class _CoctailState extends State<Coctail> {
                     style: ButtonStyle(
                       backgroundColor:
                           MaterialStatePropertyAll<Color>(blueBackground),
-                      shadowColor: MaterialStatePropertyAll<Color>(
+                      shadowColor: const MaterialStatePropertyAll<Color>(
                           Color.fromARGB(255, 218, 162, 181)),
                     ),
                     onPressed: () {
                       // функция
                       Navigator.pushNamed(context, '/recipe');
                     },
-                    child: const Text(
-                      'Смешай свой \nкоктейль!',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(fontFamily: "Exo2"),
-                    )
+                    child: const Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Text(
+                        'Смешай свой \nкоктейль!',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(fontFamily: "Exo2"),
+                      ),
+                    ),
                     // style: Theme.of(context).textTheme.bodyText2),
                     ),
               ]),
