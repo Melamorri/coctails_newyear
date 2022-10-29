@@ -21,6 +21,7 @@ class RecipePage extends StatelessWidget {
     final recipe = recipesList[rnd.nextInt(recipesList.length)];
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: const Color.fromARGB(255, 218, 162, 181) ,
         title:  Text(recipe.title),
         centerTitle: true,
       ),
@@ -40,6 +41,7 @@ class RecipePage extends StatelessWidget {
             margin: const EdgeInsets.symmetric(vertical: 12),
             child: Text(
               recipe.description,
+              textAlign: TextAlign.center,
             ),
           ),
 
