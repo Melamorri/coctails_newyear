@@ -1,14 +1,12 @@
+import 'package:coctails_newyear/helpers/colors.dart';
 import 'package:flutter/material.dart';
 import '../models/recipe_item.dart';
 import 'dart:math';
 
-
 class RecipePage extends StatelessWidget {
   const RecipePage({super.key});
 
-
   Widget buildSectionTitle(BuildContext context, String text) {
-  
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 10),
       child: Text(text, style: const TextStyle(fontSize: 24)),
@@ -20,8 +18,15 @@ class RecipePage extends StatelessWidget {
     Random rnd = Random();
     final recipe = recipesList[rnd.nextInt(recipesList.length)];
     return Scaffold(
+      backgroundColor: pinkBackground,
       appBar: AppBar(
-        title:  Text(recipe.title),
+        backgroundColor: pinkBackground,
+        title: Text('Рецепты',
+            style: TextStyle(
+                fontFamily: 'Exo2',
+                fontSize: 25,
+                fontWeight: FontWeight.w700,
+                color: blackText)),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -38,13 +43,18 @@ class RecipePage extends StatelessWidget {
 
           Container(
             margin: const EdgeInsets.symmetric(vertical: 12),
-            child: Text(
-              recipe.description,
-            ),
+            child: const Text('Название коктейля',
+                style: TextStyle(
+                  fontFamily: 'Pacifico',
+                  fontSize: 27,
+                )),
           ),
 
           //Ingredients section
-          buildSectionTitle(context, "Ingredients"),
+          buildSectionTitle(
+            context,
+            "Ингредиенты",
+          ),
           Container(
             height: 200,
             //width: 300,
@@ -56,13 +66,16 @@ class RecipePage extends StatelessWidget {
               border: Border.all(color: Colors.grey),
             ),
             child: ListView.builder(
-              itemCount: recipe.ingredients.length,
-              itemBuilder: ((context, index) =>  Card(
-                    color: Colors.yellow,
+              itemCount: 2, //recipe.ingredients.length,
+              itemBuilder: ((context, index) => const Card(
                     child: Padding(
                       padding:
-                          const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-                      child: Text(recipe.ingredients[index]),
+                          EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+                      child: Text('Ингредиент',
+                          style: TextStyle(
+                              fontFamily: 'Exo2',
+                              fontSize: 20,
+                              fontStyle: FontStyle.italic)),
                     ),
                   )),
             ),
