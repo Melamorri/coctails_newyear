@@ -27,7 +27,7 @@ class _CoverScreenPageState extends State<CoverScreenPage> {
       //     image: DecorationImage(
       //         image: AssetImage("assets/images/enter.png"), fit: BoxFit.cover)),
       child: Scaffold(
-        backgroundColor: background,
+        backgroundColor: blueBackground,
         body: Container(
           decoration: const BoxDecoration(
               image: DecorationImage(

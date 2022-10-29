@@ -28,30 +28,33 @@ class _CoctailState extends State<Coctail> {
                 Text("Наколдуй себе настроение! ",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                        color: background,
-                        fontSize: 30,
+                        color: blueBackground,
+                        // fontFamily: "Exo2",
+                        fontFamily: "Pacifico",
+                        fontSize: 40,
                         fontWeight: FontWeight.bold)),
                 Center(
                     child: Image(
                   image: AssetImage("assets/images/party.png"),
                 )),
                 ElevatedButton(
-                  style: ButtonStyle(
-                    backgroundColor:
-                        MaterialStatePropertyAll<Color>(background),
-                    shadowColor: MaterialStatePropertyAll<Color>(
-                        Color.fromARGB(255, 218, 162, 181)),
-                  ),
-                  onPressed: () {
-                    // функция
-                    Navigator.pushNamed(context, '/recipe');
-                  },
-                  child: const Text(
-                    'Смешай свой \nкоктейль!',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(),
-                  ),
-                ),
+                    style: ButtonStyle(
+                      backgroundColor:
+                          MaterialStatePropertyAll<Color>(blueBackground),
+                      shadowColor: MaterialStatePropertyAll<Color>(
+                          Color.fromARGB(255, 218, 162, 181)),
+                    ),
+                    onPressed: () {
+                      // функция
+                      Navigator.pushNamed(context, '/recipe');
+                    },
+                    child: const Text(
+                      'Смешай свой \nкоктейль!',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(fontFamily: "Exo2"),
+                    )
+                    // style: Theme.of(context).textTheme.bodyText2),
+                    ),
               ]),
         ),
       ),
