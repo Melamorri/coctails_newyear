@@ -19,7 +19,7 @@ class Recipe {
 List<Recipe> recipesList = [
   Recipe(
       id: 1,
-      title: "Мандариновый глинтвейн с розмарином",
+      title: "Мандариновый глинтвейн",
       description: "терпкий, согревающий и обнимающий новогодним настроением",
       image: "assets/images/coctails/mandarin.jpg",
       ingredients: [
